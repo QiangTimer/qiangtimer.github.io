@@ -4,17 +4,18 @@ layout: homepage
 
 ## About Me
 
-I am a Ph.D. student at ...
+I am an associated professor at the School of Computer and Information Technology of Beijing Jiaotong University. 
+
 
 ## Research Interests
 
-- **Computer Vision:** image recognition, image generation, video captioning
-- **Machine Learning:** meta-learning, incremental learning, transfer learning
+- **Internet of Thing:** Device Fingerprinting, Device Vulnerability
+- **Software Supply Chain:** Software Vulnerability, Malware Analysis, Attack Behavior analysis
 
 ## News
 
-- **[Feb. 2020]** Our paper about incremental learning is accepted to CVPR 2020.
-- **[Feb. 2020]** We will host the ACM Multimedia Asia 2020 conference in Singapore!
+- **[Nov. 2023]** Our paper about software ecosystem package is accepted to TDSC 2020.
+- **[Feb. 2023]** We will host the ACM Multimedia Asia 2020 conference in Singapore!
 - **[Sept. 2019]** Our paper about few-shot learning is accepted to NeurIPS 2019.
 - **[Mar. 2019]** Our paper about few-shot learning is accepted to CVPR 2019.
 

@@ -19,9 +19,8 @@ I am an associated professor at the School of Computer and Information Technolog
 - **[Mar. 2023]** Our paper about software version mapping is accepted to TDSC 2023.
 
 
-{% include_relative _includes/publications.md %}
+{% include_relative _includes/publications_c.md %}
 
 
 
-{% include_relative _includes/publications.md %}
-//: {% include_relative _includes/services.md %}
+{% include_relative _includes/publications_j.md %}

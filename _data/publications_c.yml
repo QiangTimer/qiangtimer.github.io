@@ -1,0 +1,70 @@
+main:
+
+  - title: PDGraph:A Large-Scale Empirical Study on Project Dependency of Security Vulnerabilities
+    authors: <strong>Qiang Li*</strong>, Jinke Song, Dawei Tan, Haining Wang, Jiqiang Liu
+    conference_short: DSN
+    conference: In 51th Annual IEEE/IFIP International Conference on Dependable Systems and Networks <strong>(DSN) </strong>, 2021.
+    pdf: https://ieeexplore.ieee.org/document/9505106
+    code: https://github.com/MrGiovanni/ContinualLearning
+    bibtex: https://bib.yliu.me/MICCAI23.txt
+   
+
+
+  - title: Under the Concealing Surface:Detecting and Understanding Live Webcams in the Wild
+    authors: Jinke Song, <strong>Qiang Li*</strong>, Haining Wang, Limin Sun
+    conference_short: SIGMETRICS
+    conference: Proceedings of the ACM on Measurement and Analysis of Computing Systems, <strong>(SIGMETRICS) </strong>, 2020.
+    pdf: https://doi.org/10.1145/3379471
+    code: https://github.com/MrGiovanni/ContinualLearning
+    bibtex: https://bib.yliu.me/MICCAI23.txt
+   
+
+
+  - title: Towards IP-based Geolocation via Fine-grained and Stable Webcam Landmarks
+    authors: Zhihao Wang, <strong>Qiang Li*</strong>,, Jinke Song, Haining Wang, and Limin Sun
+    conference_short: WWW
+    conference: In Proceedings of The Web Conference, <strong>(WWW) </strong>, 2020.
+    pdf: https://doi.org/10.1145/3366423.3380216
+    code: https://github.com/MrGiovanni/ContinualLearning
+    bibtex: https://bib.yliu.me/MICCAI23.txt
+
+
+  - title: Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis
+    authors: Xuan Feng, Xiaojing Liao, XiaoFeng Wang, Haining Wang, <strong>Qiang Li*</strong>, Kai Yang, Hongsong Zhu, Limin Sun
+    conference_short: SEC 
+    conference: In 28th {USENIX} Security Symposium, <strong>({USENIX} Security) </strong>, 2019.
+    pdf: https://doi.org/10.1145/3366423.3380216
+    code: https://github.com/MrGiovanni/ContinualLearning
+    bibtex: https://bib.yliu.me/MICCAI23.txt
+   
+
+
+  - title: Acquisitional rule-based engine for discovering Internet-of-Things devices
+    authors: Feng Xuan, <strong>Qiang Li*</strong>, Haining Wang, and Limin Sun
+    conference_short: SEC 
+    conference: In 27th {USENIX} Security Symposium, <strong>({USENIX} Security) </strong>, 2018.
+    pdf: https://doi.org/10.1145/3366423.3380216
+    code: https://github.com/MrGiovanni/ContinualLearning
+    bibtex: https://bib.yliu.me/MICCAI23.txt
+  
+
+
+  - title: Towards fine-grained fingerprinting of firmware in online embedded devices
+    authors: <strong>Qiang Li*</strong>, Xuan Feng, Raining Wang, Zhi Li, and Limin Sun
+    conference_short: INFOCOM 
+    conference: In IEEE INFOCOM 2018-IEEE Conference on Computer Communications, <strong>(INFOCOM) </strong>, 2018.
+    pdf: https://doi.org/10.1145/3366423.3380216
+    code: https://github.com/MrGiovanni/ContinualLearning
+    bibtex: https://bib.yliu.me/MICCAI23.txt
+    
+
+
+  - title: DTaint:Detecting the Taint-Style Vulnerability in Embedded Device Firmware
+    authors: Kai Cheng, <strong>Qiang Li*</strong>, Lei Wang, Qian Chen, Yaowen Zheng, Limin Sun, Zhenkai Liang
+    conference_short: DSN 
+    conference: In 48th Annual IEEE/IFIP International Conference on Dependable Systems and Networks <strong>(DSN) </strong>, 2018.
+    pdf: https://doi.org/10.1145/3366423.3380216
+    code: https://github.com/MrGiovanni/ContinualLearning
+    bibtex: https://bib.yliu.me/MICCAI23.txt
+   
+

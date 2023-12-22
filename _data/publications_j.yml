@@ -1,12 +1,87 @@
 main:
 
-  - title: Continual Learning for Abdominal Multi-Organ and Tumor Segmentation
-    authors: Yixiao Zhang, Xinyi Li, Huimiao Chen, Alan Yuille, <strong>Yaoyao Liu*</strong>, Zongwei Zhou* (*Corresponding authors)
-    conference_short: MICCAI
-    conference: International Conference on Medical Image Computing and Computer-Assisted Intervention <strong>(MICCAI)</strong>, 2023.
-    pdf: https://arxiv.org/pdf/2306.00988.pdf
+  - title: PKVIC:Supplement Missing Software Package Information in Security Vulnerability Reports
+    authors: Song Jinke, <strong>Li Qiang*</strong>, Wang Haining, Liu Jiqiang
+    conference_short: TDSC
+    conference: IEEE Transactions on Dependable and Secure Computing <strong>(TDSC)</strong>, 2023.
+    pdf: https://doi:10.1109/TDSC.2023.3334762
     code: https://github.com/MrGiovanni/ContinualLearning
     bibtex: https://bib.yliu.me/MICCAI23.txt
-    image: ./assets/img/teaser_example_2.png
-    notes: Early Accept
+
+
+  - title: Automatically Identifying CVE Affected Versions with Patches and Developer Logs
+    authors: He Yongzhong, Wang Yiming, Zhu Sencun, Wang Wei, Zhang Yunjia, <strong>Li Qiang*</strong>, Yu Aimin
+    conference_short: TDSC
+    conference: IEEE Transactions on Dependable and Secure Computing <strong>(TDSC)</strong>, 2023.
+    pdf: https://doi:10.1109/TDSC.2023.3264567.
+    code: https://github.com/MrGiovanni/ContinualLearning
+    bibtex: https://bib.yliu.me/MICCAI23.txt
+
+
+  - title: Toward Automatically Connecting IoT Devices with Vulnerabilities in the Wild
+    authors: Jinke Song, Shangfeng Wan, Min Huang, Jiqiang Liu, Limin Sun, <strong>Li Qiang*</strong>
+    conference_short: ToSN
+    conference: IEEE Transactions on Sensor Network <strong>(ToSN)</strong>, 2023.
+    pdf: https://doi.org/10.1145/3608951.
+    code: https://github.com/MrGiovanni/ContinualLearning
+    bibtex: https://bib.yliu.me/MICCAI23.txt
+
+
+  - title: DevTag:A Benchmark for Fingerprinting IoT Devices
+    authors: Wan Shangfeng, <strong>Li Qiang*</strong>, Wang Haining, Li Hong, Sun, Limin 
+    conference_short: IoTj
+    conference: IEEE Internet of Thing Journal <strong>(IoTj)</strong>, 2022.
+    pdf: https://doi.org/10.1109/JSAC.2020.2980921
+    code: https://github.com/MrGiovanni/ContinualLearning
+    bibtex: https://bib.yliu.me/MICCAI23.txt
+
+
+
+
+  - title: Understanding Security Risks of Embedded Devices through Fine-grained Firmware Fingerprinting
+    authors: <strong>Li Qiang*</strong>;  Dawei Tan; Xin Ge; Wang, Haining; Zhi Li; Liu, JiQiang. 
+    conference_short: TDSC
+    conference: IEEE Transactions on Dependable and Secure Computing <strong>(TDSC)</strong>, 2021.
+    pdf: https://doi.org/10.1145/3608951
+    code: https://github.com/MrGiovanni/ContinualLearning
+    bibtex: https://bib.yliu.me/MICCAI23.txt
+
+  - title: GeoCAM:An IP-based Geolocation Service through Fine-grained and Stable Webcam Landmarks
+    authors: <strong>Li Qiang*</strong>; Zhihao; Tan, Dawei; Song, Jinke; Wang, Haining; Sun, Limin; Liu, JiQiang
+    conference_short: ToN
+    conference: IEEE Transactions on Networking <strong>(ToN)</strong>, 2022.
+    pdf: https://doi.org/10.1145/3608951
+    code: https://github.com/MrGiovanni/ContinualLearning
+    bibtex: https://bib.yliu.me/MICCAI23.txt
+
+
+  - title: iFinger:Intrusion Detection in Industrial Control Systems via Register-based Fingerprinting
+    authors: Kai Yang, <strong>Li Qiang*</strong>, Xiaodong Lin, Xin Chen, Limin Sun, 2020, 
+    conference_short: JSAC
+    conference: IEEE Journal on Selected Areas in Communications <strong>(JSAC)</strong>, 2020.
+    pdf: https://doi.org/10.1109/JSAC.2020.2980921
+    code: https://github.com/MrGiovanni/ContinualLearning
+    bibtex: https://bib.yliu.me/MICCAI23.txt
+
+
+  - title: Towards automatic fingerprinting of IoT devices in the cyberspace
+    authors: Kai Yang, <strong>Li Qiang*</strong>, Limin Sun
+    conference_short: CN
+    conference: Computer Networks <strong>(CN)</strong>, 2019.
+    pdf: https://doi.org/10.1109/JSAC.2020.2980921
+    code: https://github.com/MrGiovanni/ContinualLearning
+    bibtex: https://bib.yliu.me/MICCAI23.txt
+
+
+
+  - title: Collaborative Recognition of Queuing Behavior on Mobile Phones
+    authors: Kai Yang, <strong>Li Qiang*</strong>, Xiaodong Lin, Xin Chen, Limin Sun, 2020, 
+    conference_short: TMC
+    conference: IEEE Transactions on Mobile Computing <strong>(TMC)</strong>, 2016.
+    pdf: https://doi.org/10.1109/JSAC.2020.2980921
+    code: https://github.com/MrGiovanni/ContinualLearning
+    bibtex: https://bib.yliu.me/MICCAI23.txt
+
+
+
 

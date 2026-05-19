@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<article class="content">
+  <h1>{{ page.title }}</h1>
+  {% include meta.html %}
+  <div class="paper-card">
+    {%- if page.venue -%}<p><strong>Venue:</strong> {{ page.venue }}</p>{%- endif -%}
+    {%- if page.authors -%}<p><strong>Authors:</strong> {{ page.authors }}</p>{%- endif -%}
+    {%- if page.year -%}<p><strong>Year:</strong> {{ page.year }}</p>{%- endif -%}
+    <div class="paper-card__links">
+      {%- if page.pdf -%}<a href="{{ page.pdf }}">PDF</a>{%- endif -%}
+      {%- if page.doi -%}<a href="https://doi.org/{{ page.doi }}">DOI</a>{%- endif -%}
+      {%- if page.link -%}<a href="{{ page.link }}">Link</a>{%- endif -%}
+    </div>
+  </div>
+  {%- if content != "" -%}
+  <div class="article-body">
+    {{ content }}
+  </div>
+  {%- endif -%}
+</article>

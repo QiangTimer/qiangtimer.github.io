@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<div class="content content--wide">
+  <section class="hero">
+    <h1>{{ page.title | default: site.title }}</h1>
+    {{ content }}
+  </section>
+
+  <div class="home-grid">
+    <section>
+      <h2 class="section-title">Recent Blog</h2>
+      {%- assign recent_posts = site.posts | where_exp: "p", "p.draft != true" | slice: 0, 5 -%}
+      {% include post-list.html posts=recent_posts %}
+      <p><a href="{{ '/blog/' | relative_url }}">All posts →</a></p>
+    </section>
+
+    <section>
+      <h2 class="section-title">Recent Briefs</h2>
+      {%- assign recent_briefs = site.briefs | slice: 0, 5 -%}
+      {% include post-list.html posts=recent_briefs %}
+      <p><a href="{{ '/briefs/' | relative_url }}">All briefs →</a></p>
+    </section>
+  </div>
+
+  {%- if site.series.size > 0 -%}
+  <h2 class="section-title">Series</h2>
+  <ul class="series-list">
+    {%- for s in site.series -%}
+    <li><a href="{{ s.url | relative_url }}"><strong>{{ s.title }}</strong></a>
+      {%- if s.description -%} — {{ s.description }}{%- endif -%}
+    </li>
+    {%- endfor -%}
+  </ul>
+  {%- endif -%}
+</div>

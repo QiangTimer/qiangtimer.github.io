@@ -1,0 +1,83 @@
+# Site — edit title, url, author
+title: Qiang Meta
+description: Embedded & infrastructure security research
+url: https://qiangtimer.github.io
+baseurl: ""
+lang: zh-CN
+timezone: Asia/Shanghai
+
+author:
+  name: Qiang
+  email: "" # optional
+
+github:
+  repository: qiangtimer/qiangtimer.github.io
+
+# Build
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+excerpt_separator: "<!--more-->"
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Collections — add .md files under each folder
+collections:
+  briefs:
+    output: true
+    permalink: /briefs/:name/
+  papers:
+    output: true
+    permalink: /papers/:name/
+  series:
+    output: true
+    permalink: /series/:name/
+  disclosure:
+    output: true
+    permalink: /disclosure/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: article
+  - scope:
+      path: ""
+      type: briefs
+    values:
+      layout: article
+  - scope:
+      path: ""
+      type: papers
+    values:
+      layout: paper
+  - scope:
+      path: ""
+      type: series
+    values:
+      layout: series
+  - scope:
+      path: ""
+      type: disclosure
+    values:
+      layout: article
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+
+# Posts live in _posts/ → /blog/YYYY/MM/DD/slug/
+permalink: /blog/:year/:month/:day/:title/
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - .gitignore

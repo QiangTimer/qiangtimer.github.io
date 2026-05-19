@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<article class="content content--wide">
+  <h1>{{ page.title }}</h1>
+  {%- if page.description -%}
+  <p class="hero">{{ page.description }}</p>
+  {%- endif -%}
+  {{ content }}
+
+  {%- assign sid = page.series_id | default: page.name -%}
+  {%- assign related = site.posts | concat: site.briefs | where: "series", sid | sort: "series_order" -%}
+
+  {%- if related.size > 0 -%}
+  <h2 class="section-title">Entries</h2>
+  {% include post-list.html posts=related %}
+  {%- endif -%}
+</article>

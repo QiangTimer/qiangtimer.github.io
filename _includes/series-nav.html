@@ -1,0 +1,21 @@
+{%- if page.series -%}
+  {%- assign series_posts = site.posts | concat: site.briefs | where: "series", page.series | sort: "series_order" -%}
+  {%- if series_posts.size > 0 -%}
+<nav class="series-nav" aria-label="Series">
+  <h2>Series: {{ page.series }}</h2>
+  <ol>
+    {%- for item in series_posts -%}
+      {%- unless item.draft or item.published == false -%}
+    <li>
+      {%- if item.url == page.url -%}
+        <strong>{{ item.title }}</strong>
+      {%- else -%}
+        <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+      {%- endif -%}
+    </li>
+      {%- endunless -%}
+    {%- endfor -%}
+  </ol>
+</nav>
+  {%- endif -%}
+{%- endif -%}

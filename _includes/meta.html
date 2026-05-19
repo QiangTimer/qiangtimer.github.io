@@ -1,0 +1,19 @@
+<div class="meta">
+  {%- if page.date -%}
+    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time>
+  {%- endif -%}
+  {%- if page.series -%}
+    · <a href="{{ '/series/' | append: page.series | append: '/' | relative_url }}">{{ page.series }}</a>
+    {%- if page.series_order -%} · #{{ page.series_order }}{%- endif -%}
+  {%- endif -%}
+  {%- if page.categories and page.categories.size > 0 -%}
+    · {{ page.categories | join: ", " }}
+  {%- endif -%}
+</div>
+{%- if page.tags and page.tags.size > 0 -%}
+<div class="tags">
+  {%- for tag in page.tags -%}
+    <a class="tag" href="{{ '/tags/' | append: tag | slugify | append: '/' | relative_url }}">#{{ tag }}</a>
+  {%- endfor -%}
+</div>
+{%- endif -%}

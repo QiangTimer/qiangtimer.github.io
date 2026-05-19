@@ -1,18 +1,44 @@
 ---
 layout: default
 ---
-<article class="content content--wide">
-  <h1>{{ page.title }}</h1>
-  {%- if page.description -%}
-  <p class="hero">{{ page.description }}</p>
-  {%- endif -%}
-  {{ content }}
+{%- assign sid = page.series_id | default: page.name -%}
+{%- assign meta = site.series_list | where: "id", sid | first -%}
+{%- assign all = site.writings | where: "series", sid -%}
+{%- assign briefs = all | where: "type", "brief" | sort: "date" | reverse -%}
+{%- assign analyses = all | where: "type", "analysis" | sort: "date" | reverse -%}
+{%- assign disclosures = site.disclosure | where: "series", sid -%}
 
-  {%- assign sid = page.series_id | default: page.name -%}
-  {%- assign related = site.posts | concat: site.briefs | where: "series", sid | sort: "series_order" -%}
+<article class="content content--wide series-landing">
+  <header class="series-hero">
+    <h1>{{ page.title | default: meta.title }}</h1>
+    <p class="series-hero__subtitle">{{ page.subtitle | default: meta.subtitle }}</p>
+    {{ content }}
+  </header>
 
-  {%- if related.size > 0 -%}
-  <h2 class="section-title">Entries</h2>
-  {% include post-list.html posts=related %}
+  {% include series-tabs.html series_id=sid %}
+
+  <section id="briefs" class="series-section">
+    <h2 class="section-title">Briefs</h2>
+    {%- if briefs.size > 0 -%}
+      {% include post-list.html posts=briefs %}
+    {%- else -%}
+      <p class="empty-note">No briefs yet.</p>
+    {%- endif -%}
+  </section>
+
+  <section id="analysis" class="series-section">
+    <h2 class="section-title">Analysis</h2>
+    {%- if analyses.size > 0 -%}
+      {% include post-list.html posts=analyses %}
+    {%- else -%}
+      <p class="empty-note">No analysis posts yet.</p>
+    {%- endif -%}
+  </section>
+
+  {%- if disclosures.size > 0 -%}
+  <section class="series-section">
+    <h2 class="section-title">Disclosures</h2>
+    {% include post-list.html posts=disclosures %}
+  </section>
   {%- endif -%}
 </article>

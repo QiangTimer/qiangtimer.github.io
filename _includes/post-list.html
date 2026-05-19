@@ -1,5 +1,9 @@
 <ul class="post-list">
-  {%- for post in include.posts -%}
+  {%- assign items = include.posts -%}
+  {%- if include.limit -%}
+    {%- assign items = include.posts | slice: 0, include.limit -%}
+  {%- endif -%}
+  {%- for post in items -%}
     {%- unless post.draft or post.published == false -%}
   <li>
     <a class="post-list__title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
@@ -8,6 +12,7 @@
         <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
       {%- endif -%}
       {%- if post.series -%} · {{ post.series }}{%- endif -%}
+      {%- if post.type -%} · {{ post.type }}{%- endif -%}
     </div>
     {%- if post.excerpt -%}
     <p class="post-list__excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>

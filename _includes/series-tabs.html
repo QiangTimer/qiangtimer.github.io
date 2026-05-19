@@ -1,0 +1,7 @@
+{%- assign sid = include.series_id -%}
+<nav class="series-tabs" aria-label="Series content">
+  <a href="{{ '/series/' | append: sid | append: '/' | relative_url }}#briefs"
+     {% if include.active == 'brief' %}aria-current="true"{% endif %}>Briefs</a>
+  <a href="{{ '/series/' | append: sid | append: '/' | relative_url }}#analysis"
+     {% if include.active == 'analysis' %}aria-current="true"{% endif %}>Analysis</a>
+</nav>

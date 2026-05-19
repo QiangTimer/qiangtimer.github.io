@@ -1,9 +1,16 @@
 ---
 layout: page
-title: Series
+title: Research Series
 permalink: /series/
 ---
 
-{% for s in site.series %}
-- [{{ s.title }}]({{ s.url | relative_url }}){%- if s.description -%} — {{ s.description }}{%- endif -%}
+Continuous research threads. Each series publishes **Briefs** (short insight) and **Analysis** (observation + method + judgment).
+
+<div class="series-grid">
+{% for s in site.series_list %}
+<article class="series-card">
+  <h3><a href="{{ '/series/' | append: s.id | append: '/' | relative_url }}">{{ s.title }}</a></h3>
+  <p class="series-card__subtitle">{{ s.subtitle }}</p>
+</article>
 {% endfor %}
+</div>

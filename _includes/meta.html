@@ -4,16 +4,15 @@
   {%- endif -%}
   {%- if page.series -%}
     · <a href="{{ '/series/' | append: page.series | append: '/' | relative_url }}">{{ page.series }}</a>
-    {%- if page.series_order -%} · #{{ page.series_order }}{%- endif -%}
   {%- endif -%}
-  {%- if page.categories and page.categories.size > 0 -%}
-    · {{ page.categories | join: ", " }}
+  {%- if page.type -%}
+    · {{ page.type }}
   {%- endif -%}
 </div>
 {%- if page.tags and page.tags.size > 0 -%}
 <div class="tags">
   {%- for tag in page.tags -%}
-    <a class="tag" href="{{ '/tags/' | append: tag | slugify | append: '/' | relative_url }}">#{{ tag }}</a>
+    <span class="tag">#{{ tag }}</span>
   {%- endfor -%}
 </div>
 {%- endif -%}

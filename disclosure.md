@@ -4,6 +4,6 @@ title: Disclosure
 permalink: /disclosure/
 ---
 
-Coordinated vulnerability disclosures (sanitized).
+Coordinated vulnerability disclosures. Public versions are sanitized — no exploit details.
 
 {% include post-list.html posts=site.disclosure %}

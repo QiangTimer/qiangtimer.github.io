@@ -1,0 +1,11 @@
+{%- assign sid = include.id -%}
+{%- assign meta = site.series_list | where: "id", sid | first -%}
+{%- assign briefs = site.writings | where: "series", sid | where: "type", "brief" | sort: "date" | reverse -%}
+{%- assign latest = briefs | first -%}
+<article class="series-card">
+  <h3><a href="{{ '/series/' | append: sid | append: '/' | relative_url }}">{{ meta.title }}</a></h3>
+  <p class="series-card__subtitle">{{ meta.subtitle }}</p>
+  {%- if latest -%}
+  <p class="series-card__latest">Latest: <a href="{{ latest.url | relative_url }}">{{ latest.title }}</a></p>
+  {%- endif -%}
+</article>

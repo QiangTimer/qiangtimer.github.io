@@ -3,4 +3,4 @@ layout: home
 title: Qiang Meta
 ---
 
-Embedded & infrastructure security — firmware, exposure analysis, exploitability reasoning.
+Embedded & infrastructure security research — firmware structure, exposure analysis, exploitability reasoning, and coordinated disclosure.

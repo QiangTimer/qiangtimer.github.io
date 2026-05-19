@@ -4,8 +4,8 @@ layout: default
 <article class="content">
   <h1>{{ page.title }}</h1>
   {% include meta.html %}
+  {% include series-tabs.html series_id=page.series active=page.type %}
   <div class="article-body">
     {{ content }}
   </div>
-  {% include series-nav.html %}
 </article>

@@ -7,30 +7,26 @@ layout: default
     {{ content }}
   </section>
 
-  <div class="home-grid">
-    <section>
-      <h2 class="section-title">Recent Blog</h2>
-      {%- assign recent_posts = site.posts | where_exp: "p", "p.draft != true" | slice: 0, 5 -%}
-      {% include post-list.html posts=recent_posts %}
-      <p><a href="{{ '/blog/' | relative_url }}">All posts →</a></p>
-    </section>
-
-    <section>
-      <h2 class="section-title">Recent Briefs</h2>
-      {%- assign recent_briefs = site.briefs | slice: 0, 5 -%}
-      {% include post-list.html posts=recent_briefs %}
-      <p><a href="{{ '/briefs/' | relative_url }}">All briefs →</a></p>
-    </section>
+  <h2 class="section-title">Research series</h2>
+  <div class="series-grid">
+    {%- for s in site.series_list -%}
+      {% include series-card.html id=s.id %}
+    {%- endfor -%}
   </div>
 
-  {%- if site.series.size > 0 -%}
-  <h2 class="section-title">Series</h2>
-  <ul class="series-list">
-    {%- for s in site.series -%}
-    <li><a href="{{ s.url | relative_url }}"><strong>{{ s.title }}</strong></a>
-      {%- if s.description -%} — {{ s.description }}{%- endif -%}
-    </li>
-    {%- endfor -%}
-  </ul>
+  {%- assign briefs = site.writings | where: "type", "brief" | sort: "date" | reverse | slice: 0, 5 -%}
+  {%- assign analyses = site.writings | where: "type", "analysis" | sort: "date" | reverse | slice: 0, 5 -%}
+
+  <h2 class="section-title">Recent briefs</h2>
+  {% include post-list.html posts=briefs %}
+
+  <h2 class="section-title">Recent analysis</h2>
+  {% include post-list.html posts=analyses %}
+
+  {%- assign recent_disclosure = site.disclosure | slice: 0, 3 -%}
+  {%- if recent_disclosure.size > 0 -%}
+  <h2 class="section-title">Disclosure</h2>
+  {% include post-list.html posts=recent_disclosure %}
+  <p><a href="{{ '/disclosure/' | relative_url }}">All disclosures →</a></p>
   {%- endif -%}
 </div>

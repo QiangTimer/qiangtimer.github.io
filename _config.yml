@@ -1,23 +1,22 @@
-# Site — edit title, url, author
 title: Qiang Meta
 description: Embedded & infrastructure security research
 url: https://qiangtimer.github.io
 baseurl: ""
-lang: zh-CN
+lang: en
 timezone: Asia/Shanghai
 
 author:
   name: Qiang
-  email: "" # optional
+  email: ""
 
 github:
   repository: qiangtimer/qiangtimer.github.io
 
-# Build
 markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+
 excerpt_separator: "<!--more-->"
 
 plugins:
@@ -25,14 +24,12 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
-# Collections — add .md files under each folder
+# Path: _writings/{series}/briefs|analysis/{slug}.md
+# URL:  /series/{series}/briefs|analysis/{slug}/
 collections:
-  briefs:
+  writings:
     output: true
-    permalink: /briefs/:name/
-  papers:
-    output: true
-    permalink: /papers/:name/
+    permalink: /series/:path/
   series:
     output: true
     permalink: /series/:name/
@@ -43,19 +40,9 @@ collections:
 defaults:
   - scope:
       path: ""
-      type: posts
+      type: writings
     values:
       layout: article
-  - scope:
-      path: ""
-      type: briefs
-    values:
-      layout: article
-  - scope:
-      path: ""
-      type: papers
-    values:
-      layout: paper
   - scope:
       path: ""
       type: series
@@ -72,12 +59,26 @@ defaults:
     values:
       layout: page
 
-# Posts live in _posts/ → /blog/YYYY/MM/DD/slug/
-permalink: /blog/:year/:month/:day/:title/
+series_list:
+  - id: agent
+    title: Agent
+    subtitle: Analysis automation & human-in-the-loop research
+  - id: vulnerability
+    title: Vulnerability
+    subtitle: From observation to issue & exploitability judgment
+  - id: firmware
+    title: Firmware
+    subtitle: Structure, crypto, unpack boundaries, IPC
+  - id: network-probing
+    title: Network Probing
+    subtitle: Exposure, fingerprinting, recon methodology
+  - id: offense-defense
+    title: Offense & Defense
+    subtitle: Constrained attack-path validation & defense insight
 
 exclude:
   - Gemfile
   - Gemfile.lock
-  - README.md
+  - CONTENT.md
   - vendor
   - .gitignore

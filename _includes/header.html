@@ -2,24 +2,24 @@
   <div class="site-header__inner">
     <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
     <nav class="site-nav" aria-label="Main">
-      {%- assign nav_paths = "blog,briefs,papers,series,disclosure,about" | split: "," -%}
-      {%- for item in nav_paths -%}
-        {%- assign nav_url = '/' | append: item | append: '/' -%}
-        {%- if item == "blog" -%}
-          {%- assign nav_url = '/blog/' -%}
-        {%- endif -%}
-        <a href="{{ nav_url | relative_url }}"
-           {% if page.url == nav_url or page.url contains nav_url and item != "blog" %}aria-current="page"{% elsif item == "blog" and page.layout == "article" and page.collection == nil %}aria-current="page"{% endif %}>
-          {%- case item -%}
-            {%- when "blog" -%}Blog
-            {%- when "briefs" -%}Briefs
-            {%- when "papers" -%}Papers
-            {%- when "series" -%}Series
-            {%- when "disclosure" -%}Disclosure
-            {%- when "about" -%}About
-          {%- endcase -%}
+      <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a>
+
+      <div class="nav-dropdown">
+        <a href="{{ '/series/' | relative_url }}" class="nav-dropdown__toggle"{% if page.url contains '/series/' %} aria-current="page"{% endif %}>
+          Series
         </a>
-      {%- endfor -%}
+        <ul class="nav-dropdown__menu">
+          {%- for s in site.series_list -%}
+          <li>
+            <a href="{{ '/series/' | append: s.id | append: '/' | relative_url }}">{{ s.title }}</a>
+            <span class="nav-dropdown__hint">{{ s.subtitle }}</span>
+          </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+
+      <a href="{{ '/disclosure/' | relative_url }}"{% if page.url contains '/disclosure' %} aria-current="page"{% endif %}>Disclosure</a>
+      <a href="{{ '/about/' | relative_url }}"{% if page.url contains '/about' %} aria-current="page"{% endif %}>About</a>
     </nav>
   </div>
 </header>

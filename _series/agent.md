@@ -3,9 +3,13 @@ title: Agent
 series_id: agent
 ---
 
-Research on analysis automation, human-in-the-loop workflows, and evaluation of tooling in security research pipelines.
 
-## Open questions
 
-- Where must a human remain in the loop for exploitability judgments?
-- What failure modes appear when agents summarize firmware structure?
+🌱 I’m currently working on Large Language Model
+🔭 I’m currently working on Security of Open-source Ecosystem
+🔭 I’m currently applying LLM to software engineering and cyberattacks.
+
+
+I would like build interesting prototype projects to explore the potential of LLM-based Agent in security research.
+
+

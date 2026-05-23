@@ -10,4 +10,4 @@ Security researcher working on firmware analysis, vulnerability research, networ
 
 **Disclosure:** public entries are sanitized; no exploit chains or weaponized tooling on this site.
 
-**Contact:** *(add email or vendor SRC)*
+**Contact:** qiangcass@gmail.com — coordinated disclosure and research inquiries.

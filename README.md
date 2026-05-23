@@ -16,4 +16,4 @@ Security researcher focused on **embedded & infrastructure** systems: firmware s
 
 Public work: research briefs, deep analysis (not tutorials), and sanitized disclosures.
 
-**Contact:** *(add email or SRC channel)*
+**Contact:** qiangcass@gmail.com

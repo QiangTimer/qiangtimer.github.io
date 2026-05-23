@@ -1,6 +1,15 @@
 ---
 layout: home
-title: Qiang Meta
+title: Qiang Timer's Research Blog
 ---
 
-Embedded & infrastructure security research — firmware structure, exposure analysis, exploitability reasoning, and coordinated disclosure.
+
+Autonomous LLM agents for complex tasks and system analysis.
+
+Security research on firmware and systems.
+
+Vulnerability research and PoC.
+
+Network exposure and reconnaissance.
+
+Offense and defense research.
